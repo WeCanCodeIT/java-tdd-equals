@@ -22,4 +22,9 @@ public class City {
 		return other.name.equals(name) && other.state.equals(state);
 	}
 
+	@Override
+	public int hashCode() {
+		return name.hashCode();
+	}
+
 }

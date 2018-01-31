@@ -1,5 +1,6 @@
 package equality;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
@@ -65,5 +66,12 @@ public class CityTest {
 		String other = "definitely not a city";
 		
 		assertFalse(underTest.equals(other));
+	}
+	
+	@Test
+	public void _07_shouldHaveSameHashcodeIfEqual() {
+		City equivalent = new City("Columbus", "OH");
+		
+		assertEquals(equivalent.hashCode(), underTest.hashCode());
 	}
 }
