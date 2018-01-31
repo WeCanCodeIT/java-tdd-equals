@@ -53,4 +53,10 @@ public class CityTest {
 		assertFalse(underTest.equals(cleveland));
 	}
 
+	@Test
+	public void _05_shouldNotBeEqualIfStateIsDifferent() {
+		City columbusNy = new City("Columbus", "NY");
+		
+		assertFalse(underTest.equals(columbusNy));
+	}
 }

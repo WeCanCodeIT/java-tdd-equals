@@ -3,9 +3,11 @@ package equality;
 public class City {
 
 	private String name;
+	private String state;
 
 	public City(String name, String state) {
 		this.name = name;
+		this.state = state;
 	}
 
 	@Override
@@ -13,7 +15,8 @@ public class City {
 		if(obj == null) {
 			return false;
 		}
-		return ((City) obj).name.equals(name);
+		City other = (City) obj;
+		return other.name.equals(name) && other.state.equals(state);
 	}
 
 }
