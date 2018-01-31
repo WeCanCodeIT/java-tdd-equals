@@ -1,5 +1,6 @@
 package equality;
 
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
@@ -27,5 +28,10 @@ public class CityTest {
 		City equivalent = new City("Columbus", "OH");
 		
 		assertTrue(underTest.equals(equivalent));
+	}
+	
+	@Test
+	public void _03_shouldNotBeEqualToNull() {
+		assertFalse(underTest.equals(null));
 	}
 }
