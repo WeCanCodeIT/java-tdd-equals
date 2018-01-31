@@ -2,7 +2,10 @@ package equality;
 
 public class City {
 
+	private String name;
+
 	public City(String name, String state) {
+		this.name = name;
 	}
 
 	@Override
@@ -10,7 +13,7 @@ public class City {
 		if(obj == null) {
 			return false;
 		}
-		return true;
+		return ((City) obj).name.equals(name);
 	}
 
 }
