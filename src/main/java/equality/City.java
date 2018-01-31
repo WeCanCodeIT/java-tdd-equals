@@ -15,6 +15,9 @@ public class City {
 		if(obj == null) {
 			return false;
 		}
+		if(!(obj instanceof City)) {
+			return false;
+		}
 		City other = (City) obj;
 		return other.name.equals(name) && other.state.equals(state);
 	}

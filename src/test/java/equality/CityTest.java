@@ -59,4 +59,11 @@ public class CityTest {
 		
 		assertFalse(underTest.equals(columbusNy));
 	}
+	
+	@Test
+	public void _06_shouldNotBeEqualToObjectOfDifferentType() {
+		String other = "definitely not a city";
+		
+		assertFalse(underTest.equals(other));
+	}
 }
