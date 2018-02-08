@@ -12,10 +12,12 @@ public class City {
 
 	@Override
 	public boolean equals(Object obj) {
-		if(obj == null) {
+		// This null check isn't entirely necessary since instanceof always returns false for null.
+		// It is usually done for (often questionable) performance reasons.
+		if (obj == null) {
 			return false;
 		}
-		if(!(obj instanceof City)) {
+		if (!(obj instanceof City)) {
 			return false;
 		}
 		City other = (City) obj;
